@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'pages/game'
+  get  'pages/game'
   root 'pages#game'
   
   namespace :api do
