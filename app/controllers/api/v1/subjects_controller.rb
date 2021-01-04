@@ -1,16 +1,16 @@
 module Api
   module V1
     class SubjectsController < ApplicationController
-      def show
-        subject = Subject.find_by(name: params[:name])
+      def index
+        subjects = Subject.select{|sub| sub.photo.id.to_s === params[:photo_id].to_s}
         
-        render json: SubjectSerializer.new(subject, options).as_json
+        render json: SubjectSerializer.new(subjects, options).as_json
       end
       
       private
       
       def options
-        @options ||= { include: %i[target_box] }
+        @options ||= { include: [:target_box] }
       end
     end
   end

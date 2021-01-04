@@ -4,11 +4,11 @@ module Api
       def index
         photos = Photo.all
         
-        render json: PhotoSerializer.new(photos, options).as_json
+        render json: PhotoSerializer.new(photos, options).serialized_json
       end
       
       def show
-        photo = Photo.find_by(name: params[:name].titleize)
+        photo = Photo.find_by(id: params[:id])
         
         render json: PhotoSerializer.new(photo, options).as_json
       end
@@ -16,7 +16,7 @@ module Api
       private
       
       def options
-        @options ||= { include: %i[subjects] }
+        @options ||= { include: [:subjects, :scores] }
       end
     end
   end

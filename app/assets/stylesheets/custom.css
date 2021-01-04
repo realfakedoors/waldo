@@ -1,0 +1,75 @@
+.dialog-option,
+.display-timer,
+.display-found-count,
+.found-subject {
+  font-family: 'Abril Fatface', cursive; }
+
+.app-container {
+  margin: 120px auto;
+  display: flex;
+  justify-content: center; }
+
+.photo-container {
+  position: relative;
+  height: 676px;
+  width: 1200px;
+  z-index: 1; }
+
+.photo-container,
+.info-panel {
+  padding: 10px;
+  border: 3px solid black;
+  border-radius: 11px; }
+
+.photo {
+  height: 100%;
+  width: 100%; }
+
+.dialog-box {
+  position: absolute;
+  padding: 3px;
+  background-color: green;
+  z-index: 2; }
+
+.dialog-option {
+  cursor: pointer; }
+
+.dialog-option:hover {
+  color: white;
+  background-color: blue; }
+
+.cancel-button {
+  color: red;
+  background-color: black; }
+
+.target-box {
+  position: absolute;
+  pointer-events: none;
+  box-shadow: 0px 0px 8px 8px #1aff1a;
+  z-index: 2; }
+
+.info-panel {
+  width: 220px;
+  height: 400px;
+  margin-left: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start; }
+
+.display-timer,
+.display-found-count {
+  width: 50%;
+  height: 40px;
+  font-size: 33px;
+  text-align: center; }
+
+.found-subjects {
+  margin: 10px auto;
+  color: #1aff1a;
+  text-shadow: 2px 1px #ccc;
+  font-size: 30px; }
+
+.found-subject {
+  margin-bottom: 5px; }
+
+/*# sourceMappingURL=custom.css.map */

@@ -3,4 +3,5 @@ class PhotoSerializer
   attributes :name
   
   has_many :subjects
+  has_many :scores
 end

@@ -1,43 +1,39 @@
-scores = Score.create([
+photos = [
   {
-    time: "122 seconds",
-    initials: "ABC"
-  },
-  {
-    time: "62 seconds",
-    initials: "DEF"
-  },
-  {
-    time: "12 seconds",
-    initials: "GHI"
-  },
-  {
-    time: "42 seconds",
-    initials: "JKL"
-  },
-  {
-    time: "28 seconds",
-    initials: "MNO"
-  },
-])
-
-photos = Photo.create([
-  {
-    name: "Total Rickall"
+    name: "Total Rickall",
+    subjects: [
+      {
+        name: "Baby Wizard",
+        top: 330,
+        bottom: 240,
+        left: 284,
+        right: 324
+      },
+      {
+        name: "Sleepy Gary",
+        top: 212,
+        bottom: 0,
+        left: 692,
+        right: 752
+      },
+      {
+        name: "Mushroom Man",
+        top: 547,
+        bottom: 415,
+        left: 1082,
+        right: 1140
+      }
+    ]
   }
-])
+]
 
-subjects = Subject.create([
-  {
-    name: "Baby Wizard",
-    photo: photos.first
-  },
-  {
-    name: "Sleepy Gary",
-    photo: photos.first
-  },
-  {
-    name: "Shakespeare",
-    photo: photos.first
-  }
-])
+photos.each do |photo|
+  new_photo = Photo.create!(name: photo[:name])
+  photo[:subjects].each do |subject|
+    new_subject = new_photo.subjects.create!(name: subject[:name])
+    new_subject.target_box = TargetBox.new(top: subject[:top], bottom: subject[:bottom], right: subject[:right], left: subject[:left])
+  end
+  10.times do 
+    new_photo.scores.create!(time: rand(10..100), initials: ("A".."Z").to_a.sample(3).join(""))
+  end
+end
