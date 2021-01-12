@@ -1,17 +1,27 @@
+body {
+  background-color: #333;
+}
+
+.intro-title,
+.intro-instructions,
+.select-a-photo,
 .dialog-option,
 .display-timer,
 .display-found-count,
-.found-subject {
-  font-family: 'Abril Fatface', cursive;
+.show-subjects,
+.found-subject,
+.game-over-screen {
+  font-family: 'Passion One', cursive;
 }
 
 .app-container {
-  margin: 120px auto;
+  margin: 80px auto;
   
   display: flex;
   justify-content: center;
 }
 
+.intro-screen,
 .photo-container {
   position: relative;
   
@@ -19,14 +29,82 @@
   width: 1200px;
   
   z-index: 1;
+  
+  text-align: center;
 }
 
 .photo-container,
-.info-panel {
+.info-panel,
+.photo-card,
+.game-over-high-scores {
   padding: 10px;
   
   border: 3px solid black;
   border-radius: 11px;
+}
+
+.intro-title {
+  font-size: 116px;
+  color: #f02311;
+}
+
+.intro-instructions {
+  width: 700px;
+  
+  margin: 24px auto;
+  
+  font-size: 55px;
+  color: #11ddf0;
+}
+
+.select-a-photo,
+.show-subjects {
+  font-size: 44px;
+  color: #99f05b;
+}
+
+.card-display {
+  width: 1100px;
+  
+  margin: 30px auto;
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.photo-card {
+  width: 330px;
+  background-color: #aaa;
+  
+  text-shadow: 2px 2px #333;
+  color: #ddd;
+  
+  .card-image {
+    width: 100%;
+    max-height: 350px;
+    
+    margin-bottom: 5px;
+  }
+}
+
+.start-button,
+.submit-button,
+.reset-button {
+  width: 170px;
+    
+  margin: 25px auto 0;
+  padding: 11px;
+  
+  border: 3px solid #428c0d;
+  border-radius: 7px;
+  
+  color: #428c0d;
+  background-color: #99f05b;
+  
+  font-size: 55px;
+  
+  cursor: pointer;
 }
 
 .photo {
@@ -39,43 +117,57 @@
   
   padding: 3px;
   
-  background-color: green;
+  background-color: #aaa;
   
   z-index: 2;
 }
 
 .dialog-option {
+  padding: 5px;
+  
+  font-size: 20px;
+  
   cursor: pointer;
 }
 
 .dialog-option:hover {
   color: white;
-  background-color: blue;
+  background-color: #333;
 }
 
 .cancel-button {
-  color: red;
-  background-color: black;
+  width: 75%;
+  
+  margin: 2px auto 5px;
+  
+  color: #f0675b;
+  background-color: #333;
+}
+
+.cancel-button:hover {
+  background-color: #f0675b;
 }
 
 .target-box {
   position: absolute;
   pointer-events: none;
   
-  box-shadow: 0px 0px 8px 8px #1aff1a;
+  box-shadow: 0px 0px 8px 8px #6ef011;
   
   z-index: 2;
 }
 
 .info-panel {
   width: 220px;
-  height: 400px;
+  height: 676px;
   
   margin-left: 15px;
   
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
+  
+  background-color: #aaa;
 }
 
 .display-timer,
@@ -83,18 +175,114 @@
   width: 50%;
   height: 40px;
   
-  font-size: 33px;
+  margin-bottom: 10px;
+  
+  font-size: 43px;
   text-align: center;
+  color: #5be3f0;
+  text-shadow: 3px 3px #222;
 }
 
 .found-subjects {
   margin: 10px auto;
   
-  color: #1aff1a;
-  text-shadow: 2px 1px #ccc;
-  font-size: 30px;
+  color: #6ef011;
+  text-shadow: 2px 2px #333;
+  font-size: 34px;
 }
 
 .found-subject {
   margin-bottom: 5px;
+  
+  text-align: center;
+}
+
+.game-over-screen {
+  text-align: center;
+}
+
+.game-over-photo-name {
+  font-size: 98px;
+  color: #5be3f0;
+}
+
+.game-over-high-scores,
+.game-over-submit-score {
+  width: 600px;
+  padding: 30px 45px;
+  
+  margin: 16px auto;
+  
+  display: flex;
+  flex-direction: column;
+  
+  font-size: 60px;
+  text-shadow: 2px 2px #444;
+  color: #f0675b;
+  
+  background-color: #aaa;
+  
+  .score {
+    margin: 11px auto 0;
+    
+    display: flex;
+    justify-content: center;
+    
+    .score-rank {
+      width: 60px;
+      color: #5be3f0;
+      font-size: 40px;
+    }
+    .score-time {
+      width: 100px;
+      color: #99f05b;
+      font-size: 48px;
+    }
+    .score-initials {
+      width: 170px;
+      color: #428c0d;
+      font-size: 65px;
+    }
+    .score-rank,
+    .score-time,
+    .score-initials,
+    .submit-button {
+      padding: 0 5px;
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .submit-button {
+      width: 110px;
+      
+      margin: auto 10px;
+      padding: 5px;
+      
+      font-size: 33px;
+    }
+    
+    #enter-initials {
+      width: inherit;
+      
+      font: inherit;
+      color: #428c0d;
+      text-align: center;
+      
+      border: 2px solid black;
+      border-radius: 7px;
+    }
+  }
+  
+  #submission-errors {
+    margin-top: 10px;
+    
+    font-size: 44px;
+    color: #f02311;
+  }
+}
+
+.reset-button {
+  width: 300px;
 }

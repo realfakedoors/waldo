@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import DialogBox from "./DialogBox";
 import TargetBox from "./TargetBox";
 
-import TotalRickall from "total-rickall.jpg";
-
-const Photo = ({ allSubjects, foundSubjects, tryCoords }) => {
+const Photo = ({ photoData, allSubjects, foundSubjects, tryCoords }) => {
   const [clickCoords, setClickCoords] = useState([0, 0]);
   const [showDialog, setShowDialog] = useState(false);
 
@@ -42,7 +40,7 @@ const Photo = ({ allSubjects, foundSubjects, tryCoords }) => {
 
   return (
     <div className="photo-container">
-      <img className="photo" src={TotalRickall} onClick={createDialogBox} />
+      {photoData && <img className="photo" src={`images/${photoData}`} onClick={createDialogBox} />}
       <DialogBox
         options={allSubjects.filter(
           (subj) => !foundSubjects.map((subj) => subj).includes(subj)

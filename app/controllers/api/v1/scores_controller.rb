@@ -2,9 +2,10 @@ module Api
   module V1
     class ScoresController < ApplicationController
       protect_from_forgery with: :null_session
+      skip_before_action :verify_authenticity_token
       
       def index
-        scores = Score.all
+        scores = Score.all.order('time::integer ASC').limit(10)
         
         render json: ScoreSerializer.new(scores).as_json
       end

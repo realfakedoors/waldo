@@ -21,3 +21,6 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+/.sass-cache
+/app/assets/stylesheets/.sass-cache

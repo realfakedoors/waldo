@@ -6,3 +6,5 @@ Meant to demonstrate a solid grasp on using Rails as a backend API for a React a
 Part of The Odin Project: https://www.theodinproject.com/lessons/where-s-waldo-a-photo-tagging-app-javascript  
 
 Uses Rails 5.2, React, PostgreSQL and Webpacker.  
+
+Favicon made by [freepik](https://www.flaticon.com/authors/freepik).  
