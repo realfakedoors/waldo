@@ -20,16 +20,6 @@ module Api
         end
       end
       
-      def destroy
-        score = Score.find_by(id: params[:id])
-        
-        if score.destroy
-          head :no_content
-        else
-          render json: { error: score.errors.messages }, status: 422
-        end
-      end
-      
       private
       
       def score_params

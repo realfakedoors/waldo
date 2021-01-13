@@ -7,7 +7,7 @@ Rails.application.routes.draw do
       resources :photos, only: [:index, :show] 
       resources :photos do
         resources :subjects, only: [:index]
-        resources :scores, only: [:index, :create, :destroy]
+        resources :scores, only: [:index, :create]
       end
     end
   end
