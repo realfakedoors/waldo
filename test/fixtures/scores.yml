@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  time: MyString
-  initials: MyString
-
-two:
-  time: MyString
-  initials: MyString
+XYZ:
+  photo_id: 1
+  time: 420
+  initials: XYZ
+  
+QQQ:
+  photo_id: 1
+  time: 420
+  initials: QQQ

@@ -7,7 +7,7 @@ module Api
       before_action :set_photo
       
       def index
-        scores = @photo.scores.order("time::integer ASC").limit(10)
+        scores = @photo.scores.order(Arel.sql("time::integer ASC")).limit(10)
         
         render json: ScoreSerializer.new(scores).as_json
       end
