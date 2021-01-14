@@ -5,7 +5,7 @@ module Api
       skip_before_action :verify_authenticity_token
       
       def index
-        scores = Score.all.order('time::integer ASC').limit(10)
+        scores = Score.all.order('time ASC').limit(10)
         
         render json: ScoreSerializer.new(scores).as_json
       end
