@@ -4,14 +4,16 @@ module Api
       protect_from_forgery with: :null_session
       skip_before_action :verify_authenticity_token
       
+      before_action :set_photo
+      
       def index
-        scores = Score.all.order('time ASC').limit(10)
+        scores = @photo.scores.order("time::integer ASC").limit(10)
         
         render json: ScoreSerializer.new(scores).as_json
       end
       
       def create
-        score = Score.new(score_params)
+        score = @photo.scores.new(score_params)
         
         if score.save
           render json: ScoreSerializer.new(score).as_json
@@ -21,6 +23,10 @@ module Api
       end
       
       private
+      
+      def set_photo
+        @photo = Photo.find(params[:photo_id])
+      end
       
       def score_params
         params.require(:score).permit(:time, :initials)
