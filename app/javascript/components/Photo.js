@@ -39,8 +39,14 @@ const Photo = ({ photoData, allSubjects, foundSubjects, tryCoords }) => {
   }
 
   return (
-    <div className="photo-container">
-      {photoData && <img className="photo" src={`images/${photoData}`} onClick={createDialogBox} />}
+    <div className="photo-container" data-testid="photo-container">
+      {photoData && (
+        <img
+          className="photo"
+          src={`images/${photoData}`}
+          onClick={createDialogBox}
+        />
+      )}
       <DialogBox
         options={allSubjects.filter(
           (subj) => !foundSubjects.map((subj) => subj).includes(subj)

@@ -10,7 +10,7 @@ const TargetBox = ({ top, bottom, left, right }) => {
   }
   
   return(
-    <div className="target-box" style={sides}></div>
+    <div className="target-box" style={sides} data-testid="target-box"></div>
   );
 }
 

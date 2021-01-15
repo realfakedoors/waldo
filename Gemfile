@@ -44,8 +44,6 @@ group :test do
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
   gem 'minitest'
-  gem 'guard'
-  gem 'guard-minitest'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

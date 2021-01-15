@@ -101,9 +101,6 @@ GEM
       guard (~> 2.8)
       guard-compat (~> 1.0)
       multi_json (~> 1.8)
-    guard-minitest (2.4.6)
-      guard-compat (~> 1.2)
-      minitest (>= 3.0)
     http_parser.rb (0.6.0)
     i18n (1.8.5)
       concurrent-ruby (~> 1.0)
@@ -243,9 +240,7 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   fast_jsonapi
-  guard
   guard-livereload (~> 2.5.2)
-  guard-minitest
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   minitest

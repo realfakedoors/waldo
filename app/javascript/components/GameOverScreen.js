@@ -106,7 +106,7 @@ const GameOverScreen = ({
           <div className="score">
             <span className="score-rank">#{calculateRank()}</span>
             <span className="score-initials">
-              <input id="enter-initials" maxLength="3"></input>
+              <input id="enter-initials" maxLength="3" data-testid="enter-initials"></input>
             </span>
             <span className="score-time">{buildTimeString(time)}</span>
             <div className="submit-button" onClick={() => submitInitials()}>
