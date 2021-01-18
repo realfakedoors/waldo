@@ -102,7 +102,7 @@ const GameOverScreen = ({
       <div className="game-over-submit-score">
         You made it to the top 10!
         <div className="enter-score">
-          <u>Enter your initials:</u>
+          Enter your initials:
           <div className="score">
             <span className="score-rank">#{calculateRank()}</span>
             <span className="score-initials">

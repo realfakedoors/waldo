@@ -7,4 +7,6 @@ Part of The Odin Project: https://www.theodinproject.com/lessons/where-s-waldo-a
 
 Uses Rails 5.2, React, PostgreSQL and Webpacker.  
 
-Favicon made by [freepik](https://www.flaticon.com/authors/freepik).  
+Tag Icon made by [kiranshastry](https://www.flaticon.com/authors/kiranshastry).  
+
+Color palette is [California Sunset](https://www.colourlovers.com/palette/4783633/California_Sunset) by [lisaraygoza](https://www.colourlovers.com/lover/lisaraygoza).  

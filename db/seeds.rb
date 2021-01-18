@@ -68,7 +68,7 @@ photos = [
     ]
   },
   {
-    name: "Actually Where's Waldo",
+    name: "Where's Waldo",
     image_url: "actual-wheres-waldo.jpg",
     subjects: [
       {
