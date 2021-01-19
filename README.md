@@ -1,5 +1,7 @@
 # waldo
 
+# Check it out on [Heroku!](https://tranquil-retreat-21663.herokuapp.com/)  
+
 A photo tagging game where players can race against the clock to pick characters out of a crowd, like a page in a Where's Waldo book.  
 
 Meant to demonstrate a solid grasp on using Rails as a backend API for a React app.  
